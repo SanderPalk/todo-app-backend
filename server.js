@@ -6,7 +6,7 @@ const app = express();
 const PORT = 3001;
 
 app.use(cors({
-    origin: ["http://localhost:3000", ]
+    origin: ["http://localhost:3000", "https://to-do-app-prai.onrender.com"]
 }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
