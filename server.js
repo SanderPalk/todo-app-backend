@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const fs = require('fs');
 const app = express();
+const PORT = 3001;
 
 app.use(cors({
     origin: ["http://localhost:3000", "https://to-do-app-prai.onrender.com"]
@@ -77,3 +78,7 @@ app.delete('/tasks', (req, res) => {
     fs.writeFileSync(dataPath, JSON.stringify(data));
     res.json(deletedTasks);
 });
+
+
+
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
